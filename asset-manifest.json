@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tt-starnavi/static/css/main.964fdded.css",
+    "main.js": "/tt-starnavi/static/js/main.3b6323b8.js",
+    "index.html": "/tt-starnavi/index.html",
+    "main.964fdded.css.map": "/tt-starnavi/static/css/main.964fdded.css.map",
+    "main.3b6323b8.js.map": "/tt-starnavi/static/js/main.3b6323b8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964fdded.css",
+    "static/js/main.3b6323b8.js"
+  ]
+}
