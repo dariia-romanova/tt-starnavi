@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import getModes from './api/modes';
 import Form from './components/Form/Form';
+import Field from './components/Field/Field';
 
 import './App.css';
 
@@ -20,7 +21,7 @@ function App() {
   }, []);
 
   const changeFieldSize = (size) => {
-    setFieldSize(size);
+    setFieldSize(Number(size));
   };
 
   return (
@@ -30,8 +31,7 @@ function App() {
         changeFieldSize={changeFieldSize}
         modes={modes}
       />
-      <p>{fieldSize}</p>
-      {/* <Field /> */}
+      <Field size={fieldSize} />
     </div>
   );
 }

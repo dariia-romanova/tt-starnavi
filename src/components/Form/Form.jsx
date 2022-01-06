@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import './Form.scss';
+
+function convertCamelCase(text) {
+  const result = text.replace(/([A-Z])/g, ' $1');
+  return result.charAt(0).toUpperCase() + result.slice(1);
+}
+
 function Form({ changeFieldSize, modes }) {
   const [size, setSize] = useState(0);
 
@@ -10,12 +17,16 @@ function Form({ changeFieldSize, modes }) {
   };
 
   return (
-    <form>
-      <select value={size} onChange={(event) => setSize(event.target.value)}>
+    <form className="form">
+      <select
+        value={size}
+        onChange={(event) => setSize(event.target.value)}
+        className="form__input"
+      >
         <option value="0" disabled>Choose mode</option>
         {modes.map((chosenMode) => (
           <option key={chosenMode.mode} value={chosenMode.fieldSize}>
-            {chosenMode.mode}
+            {convertCamelCase(chosenMode.mode)}
           </option>
         ))}
 
@@ -24,6 +35,7 @@ function Form({ changeFieldSize, modes }) {
         type="submit"
         onClick={handleSubmit}
         disabled={!size}
+        className="form__button"
       >
         Start
       </button>
