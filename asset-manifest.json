@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/tt-starnavi/static/css/main.a441e227.css",
-    "main.js": "/tt-starnavi/static/js/main.f7691d24.js",
+    "main.css": "/tt-starnavi/static/css/main.1d9f519b.css",
+    "main.js": "/tt-starnavi/static/js/main.f44ee12c.js",
     "index.html": "/tt-starnavi/index.html",
-    "main.a441e227.css.map": "/tt-starnavi/static/css/main.a441e227.css.map",
-    "main.f7691d24.js.map": "/tt-starnavi/static/js/main.f7691d24.js.map"
+    "main.1d9f519b.css.map": "/tt-starnavi/static/css/main.1d9f519b.css.map",
+    "main.f44ee12c.js.map": "/tt-starnavi/static/js/main.f44ee12c.js.map"
   },
   "entrypoints": [
-    "static/css/main.a441e227.css",
-    "static/js/main.f7691d24.js"
+    "static/css/main.1d9f519b.css",
+    "static/js/main.f44ee12c.js"
   ]
 }
