@@ -34,24 +34,37 @@ function Field({ size }) {
   }, [size]);
 
   return (
-    <section className="field">
-      {field.map((row) => (
-        <div className="field__row" key={row[0].row}>
-          {row.map((cell) => (
-            <div
-              className={classNames('field__cell', { 'field__cell--hover': cell.hover })}
-              key={`${cell.row}-${cell.col}`}
-              onFocus={() => {
-                handleMouseOver(cell.row, cell.col);
-              }}
-              onMouseOver={() => {
-                handleMouseOver(cell.row, cell.col);
-              }}
-            />
+    <div>
+      <section className="field">
+        {field.map((row) => (
+          <div className="field__row" key={row[0].row}>
+            {row.map((cell) => (
+              <div
+                className={classNames('field__cell', { 'field__cell--hover': cell.hover })}
+                key={`${cell.row}-${cell.col}`}
+                onFocus={() => {
+                  handleMouseOver(cell.row, cell.col);
+                }}
+                onMouseOver={() => {
+                  handleMouseOver(cell.row, cell.col);
+                }}
+              />
+            ))}
+          </div>
+        ))}
+      </section>
+
+      <section>
+        <h2>Hover squares</h2>
+        <ul>
+          {field.map((row) => (
+            row.map((cell) => (
+              cell.hover && <li key={`${cell.row}-${cell.col}`}>{`row ${cell.row + 1} col ${cell.col + 1}`}</li>
+            ))
           ))}
-        </div>
-      ))}
-    </section>
+        </ul>
+      </section>
+    </div>
   );
 }
 
