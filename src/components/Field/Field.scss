@@ -6,5 +6,9 @@
     height: 40px;
     width: 40px;
     border: 1px solid #777;
+
+    &--hover {
+      background-color: blue;
+    }
   }
 }
