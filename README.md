@@ -15,5 +15,5 @@ TECHSTACK: React/JS/HTML/CSS(SCSS)
 ## How to install
 
 - Fork and clone this repository
-- Run npm install in your terminal
-- Run npm start
+- Run `npm install` in your terminal
+- Run `npm start` 
