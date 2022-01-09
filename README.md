@@ -9,7 +9,7 @@ TECHSTACK: React/JS/HTML/CSS(SCSS)
 - User can set app mode and create field by pressing 'Start'
 - If the user hovers on the square - it turns blue
 - If the user hovers on the blue square - it turns white
-- Hovers squares are shown as a list
+- Hover squares are shown as a list
 - Press 'Reset' to reset mode
 
 ## How to install
