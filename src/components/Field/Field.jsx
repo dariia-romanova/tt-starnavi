@@ -57,7 +57,7 @@ function Field({ size }) {
           </section>
 
           <section>
-            <h2>Hover squares</h2>
+            <h2 className="field__list-title">Hover squares</h2>
             <ul className="field__list-of-hovers">
               {field.map((row) => (
                 row.map((cell) => (

@@ -10,10 +10,13 @@ function convertCamelCase(text) {
 
 function Form({ changeFieldSize, resetField, modes }) {
   const [size, setSize] = useState(0);
+  const [canReset, setReset] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault(0);
     changeFieldSize(size);
+    setSize(0);
+    setReset(true);
   };
 
   return (
@@ -41,8 +44,11 @@ function Form({ changeFieldSize, resetField, modes }) {
       </button>
       <button
         type="button"
-        disabled={!size}
-        onClick={resetField}
+        disabled={!canReset}
+        onClick={() => {
+          resetField();
+          setReset(false);
+        }}
         className="form__button"
       >
         Reset
