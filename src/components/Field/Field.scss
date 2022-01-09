@@ -1,8 +1,14 @@
 .field {
   display: flex;
+  gap: 50px;
   justify-content: center;
 
-  &__cell {
+  &__squares {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__square {
     height: 40px;
     width: 40px;
     border: 1px solid #777;
@@ -10,5 +16,15 @@
     &--hover {
       background-color: blue;
     }
+  }
+
+  &__list-of-hovers {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 200px;
   }
 }

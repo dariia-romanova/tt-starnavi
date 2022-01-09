@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+li {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   margin: 0;
   padding: 0;

@@ -9,11 +9,16 @@ import './App.css';
 function App() {
   const [fieldSize, setFieldSize] = useState(0);
   const [modes, setModes] = useState([]);
+  const [isErrror, setError] = useState(false);
 
   const fetchModes = async () => {
-    const modesFromServer = await getModes();
+    try {
+      const modesFromServer = await getModes();
 
-    setModes(modesFromServer);
+      setModes(modesFromServer);
+    } catch {
+      setError(true);
+    }
   };
 
   useEffect(() => {
@@ -24,14 +29,24 @@ function App() {
     setFieldSize(Number(size));
   };
 
+  const resetField = () => {
+    setFieldSize(0);
+  };
+
   return (
     <div className="App">
-      <h1>StarNavi Test Task</h1>
-      <Form
-        changeFieldSize={changeFieldSize}
-        modes={modes}
-      />
-      <Field size={fieldSize} />
+      {!isErrror ? (
+        <>
+          <Form
+            changeFieldSize={changeFieldSize}
+            resetField={resetField}
+            modes={modes}
+          />
+          <Field size={fieldSize} />
+        </>
+      ) : (
+        <p>Failed to load modes</p>
+      )}
     </div>
   );
 }

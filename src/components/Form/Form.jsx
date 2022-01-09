@@ -8,7 +8,7 @@ function convertCamelCase(text) {
   return result.charAt(0).toUpperCase() + result.slice(1);
 }
 
-function Form({ changeFieldSize, modes }) {
+function Form({ changeFieldSize, resetField, modes }) {
   const [size, setSize] = useState(0);
 
   const handleSubmit = (event) => {
@@ -39,12 +39,21 @@ function Form({ changeFieldSize, modes }) {
       >
         Start
       </button>
+      <button
+        type="button"
+        disabled={!size}
+        onClick={resetField}
+        className="form__button"
+      >
+        Reset
+      </button>
     </form>
   );
 }
 
 Form.propTypes = {
   changeFieldSize: PropTypes.func.isRequired,
+  resetField: PropTypes.func.isRequired,
   modes: PropTypes.arrayOf(
     PropTypes.shape({ fieldSize: PropTypes.number, mode: PropTypes.string }),
   ).isRequired,
